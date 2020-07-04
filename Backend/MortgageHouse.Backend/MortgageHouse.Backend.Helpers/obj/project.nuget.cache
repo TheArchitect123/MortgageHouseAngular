@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "kOIGN6JEBNMM8vHuQiqHIKtKY27BiXQJbC8rIRGWMSqcH1VOB0un3PcLuZ40Br3uKjzX+Fp6AlvyaRUI+AXJeA==",
+  "success": true,
+  "projectFilePath": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Helpers\\MortgageHouse.Backend.Helpers.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\system.diagnostics.eventlog\\4.7.0\\system.diagnostics.eventlog.4.7.0.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

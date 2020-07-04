@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MortgageHouse.Backend.Domain\MortgageHouse.Backend.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

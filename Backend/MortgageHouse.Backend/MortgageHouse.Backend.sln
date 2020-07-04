@@ -3,9 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MortgageHouse.Backend.RestApi", "MortgageHouse.Backend.RestApi\MortgageHouse.Backend.RestApi.csproj", "{04655DEB-8FF6-4F81-AD4E-3447F6CD9B7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MortgageHouse.Backend.RestApi", "MortgageHouse.Backend.RestApi\MortgageHouse.Backend.RestApi.csproj", "{04655DEB-8FF6-4F81-AD4E-3447F6CD9B7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MortgageHouse.Backend.Dto", "MortgageHouse.Backend.Dto\MortgageHouse.Backend.Dto.csproj", "{7DF52161-F645-4B11-ABEF-0A3A5A21A4CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MortgageHouse.Backend.Dto", "MortgageHouse.Backend.Dto\MortgageHouse.Backend.Dto.csproj", "{7DF52161-F645-4B11-ABEF-0A3A5A21A4CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{DBDBB634-7FE0-420B-9720-1E271F6D6B3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{9CBEA34F-4822-40E4-A92D-5B056ADA9994}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{5A8AECDC-60D3-447B-B809-1BB0E1C1E30F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MortgageHouse.Backend.Services", "MortgageHouse.Backend.Services\MortgageHouse.Backend.Services.csproj", "{A376ABCE-6386-4931-9E7B-AD6122144089}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MortgageHouse.Backend.CsvDriver", "MortgageHouse.Backend.CsvDriver\MortgageHouse.Backend.CsvDriver.csproj", "{A1E5B517-2386-4F1B-AC17-BEACDE73BDB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MortgageHouse.Backend.Domain", "MortgageHouse.Backend.Domain\MortgageHouse.Backend.Domain.csproj", "{31D3B06E-29DD-49FD-9508-18018A35AAED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MortgageHouse.Backend.Helpers", "MortgageHouse.Backend.Helpers\MortgageHouse.Backend.Helpers.csproj", "{C60B37B9-FD72-45E2-A88D-3C408EA0EED0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{E3F4412F-906F-4E4B-888A-03F1A978C942}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MortgageHouse.Backend.Constants", "MortgageHouse.Backend.Constants\MortgageHouse.Backend.Constants.csproj", "{C0BC1AE5-ACAC-493C-AA57-F266B69D97D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MortgageHouse.Backend.Extensions", "MortgageHouse.Backend.Extensions\MortgageHouse.Backend.Extensions.csproj", "{CD6635C6-4FD1-4CD7-A7B5-1B2C47B35139}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +41,43 @@ Global
 		{7DF52161-F645-4B11-ABEF-0A3A5A21A4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DF52161-F645-4B11-ABEF-0A3A5A21A4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DF52161-F645-4B11-ABEF-0A3A5A21A4CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A376ABCE-6386-4931-9E7B-AD6122144089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A376ABCE-6386-4931-9E7B-AD6122144089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A376ABCE-6386-4931-9E7B-AD6122144089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A376ABCE-6386-4931-9E7B-AD6122144089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E5B517-2386-4F1B-AC17-BEACDE73BDB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E5B517-2386-4F1B-AC17-BEACDE73BDB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E5B517-2386-4F1B-AC17-BEACDE73BDB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E5B517-2386-4F1B-AC17-BEACDE73BDB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31D3B06E-29DD-49FD-9508-18018A35AAED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31D3B06E-29DD-49FD-9508-18018A35AAED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31D3B06E-29DD-49FD-9508-18018A35AAED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31D3B06E-29DD-49FD-9508-18018A35AAED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C60B37B9-FD72-45E2-A88D-3C408EA0EED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C60B37B9-FD72-45E2-A88D-3C408EA0EED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C60B37B9-FD72-45E2-A88D-3C408EA0EED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C60B37B9-FD72-45E2-A88D-3C408EA0EED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0BC1AE5-ACAC-493C-AA57-F266B69D97D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0BC1AE5-ACAC-493C-AA57-F266B69D97D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0BC1AE5-ACAC-493C-AA57-F266B69D97D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0BC1AE5-ACAC-493C-AA57-F266B69D97D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD6635C6-4FD1-4CD7-A7B5-1B2C47B35139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD6635C6-4FD1-4CD7-A7B5-1B2C47B35139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD6635C6-4FD1-4CD7-A7B5-1B2C47B35139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD6635C6-4FD1-4CD7-A7B5-1B2C47B35139}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{04655DEB-8FF6-4F81-AD4E-3447F6CD9B7C} = {DBDBB634-7FE0-420B-9720-1E271F6D6B3D}
+		{7DF52161-F645-4B11-ABEF-0A3A5A21A4CF} = {DBDBB634-7FE0-420B-9720-1E271F6D6B3D}
+		{A376ABCE-6386-4931-9E7B-AD6122144089} = {DBDBB634-7FE0-420B-9720-1E271F6D6B3D}
+		{A1E5B517-2386-4F1B-AC17-BEACDE73BDB5} = {9CBEA34F-4822-40E4-A92D-5B056ADA9994}
+		{31D3B06E-29DD-49FD-9508-18018A35AAED} = {5A8AECDC-60D3-447B-B809-1BB0E1C1E30F}
+		{C60B37B9-FD72-45E2-A88D-3C408EA0EED0} = {E3F4412F-906F-4E4B-888A-03F1A978C942}
+		{C0BC1AE5-ACAC-493C-AA57-F266B69D97D3} = {E3F4412F-906F-4E4B-888A-03F1A978C942}
+		{CD6635C6-4FD1-4CD7-A7B5-1B2C47B35139} = {E3F4412F-906F-4E4B-888A-03F1A978C942}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {96DD8C47-4EB1-4A1D-AE2E-A5694D9CD379}

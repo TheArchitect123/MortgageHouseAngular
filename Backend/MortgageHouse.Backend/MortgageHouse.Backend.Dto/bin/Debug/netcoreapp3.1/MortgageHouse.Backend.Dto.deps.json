@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "MortgageHouse.Backend.Dto/1.0.0": {
+        "dependencies": {
+          "MortgageHouse.Backend.Domain": "1.0.0"
+        },
+        "runtime": {
+          "MortgageHouse.Backend.Dto.dll": {}
+        }
+      },
+      "MortgageHouse.Backend.Domain/1.0.0": {
+        "runtime": {
+          "MortgageHouse.Backend.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MortgageHouse.Backend.Dto/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MortgageHouse.Backend.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

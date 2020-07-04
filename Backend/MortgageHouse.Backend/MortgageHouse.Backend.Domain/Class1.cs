@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MortgageHouse.Backend.Dto
+namespace MortgageHouse.Backend.Domain
 {
     public class Class1
     {

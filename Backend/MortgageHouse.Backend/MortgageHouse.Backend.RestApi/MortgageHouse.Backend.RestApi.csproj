@@ -1,10 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MortgageHouse.Backend.Constants\MortgageHouse.Backend.Constants.csproj" />
+    <ProjectReference Include="..\MortgageHouse.Backend.CsvDriver\MortgageHouse.Backend.CsvDriver.csproj" />
+    <ProjectReference Include="..\MortgageHouse.Backend.Domain\MortgageHouse.Backend.Domain.csproj" />
+    <ProjectReference Include="..\MortgageHouse.Backend.Dto\MortgageHouse.Backend.Dto.csproj" />
+    <ProjectReference Include="..\MortgageHouse.Backend.Extensions\MortgageHouse.Backend.Extensions.csproj" />
+    <ProjectReference Include="..\MortgageHouse.Backend.Helpers\MortgageHouse.Backend.Helpers.csproj" />
+    <ProjectReference Include="..\MortgageHouse.Backend.Services\MortgageHouse.Backend.Services.csproj" />
   </ItemGroup>
 
 </Project>
