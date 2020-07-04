@@ -4,12 +4,15 @@ using Microsoft.AspNetCore.Mvc;
 using MortgageHouse.Backend.Services.Business;
 using MortgageHouse.Backend.Extensions;
 using Newtonsoft.Json;
+using MortgageHouse.Backend.Constants;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MortgageHouse.Backend.RestApi.Controllers
 {
     [Produces("plain/text")]
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = (SecurityConstants.AuthenticationScheme))]
     public class MortgageHouse_ContactsGET : ControllerBase
     {
         public MortgageHouse_ContactsGET(IMapper mapper, ContactsService contactsMngr)

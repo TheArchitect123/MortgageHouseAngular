@@ -18,26 +18,20 @@ namespace MortgageHouse.Backend.CsvDriver.Services
 
         public DatabaseService()
         {
-            //Initialize the headers for each entity & create the csv file if it does not yet exist
+            InitializeDatabase();
+        }
+
+        private void InitializeDatabase()
+        {
             if (!File.Exists(_databasePath))
             {
                 Directory.CreateDirectory(DbConstants.ConnectionStringDir);
                 File.Create(_databasePath).Dispose();
                 using (var writer = CreateWriterForDb())
                 {
-                    writer.Configuration.RegisterClassMap<AddressMaps>();
-                    writer.WriteHeader(typeof(AddressMaps));
-
-
-                    writer.Configuration.RegisterClassMap<ContactsMaps>();
-                    writer.WriteHeader(typeof(ContactsMaps));
+                    writer.WriteHeader<Address>();
+                    writer.WriteHeader<Contact>();
                 }
-
-                //using (var item = CreateWriterForDb())
-                //{
-                //    item.Configuration.RegisterClassMap<ContactsMaps>();
-                //    item.WriteField(typeof(ContactsMaps));
-                //}
             }
         }
 
@@ -60,7 +54,12 @@ namespace MortgageHouse.Backend.CsvDriver.Services
         public IEnumerable<PersistentType> GetAllItems<PersistentType>() where PersistentType : class, new()
         {
             using (var reader = CreateReaderForDb())
+            {
+                reader.Configuration.RegisterClassMap<AddressMaps>();
+                reader.Configuration.HeaderValidated = null;
+                reader.Configuration.MissingFieldFound = null;
                 return reader.GetRecords<PersistentType>();
+            }
         }
     }
 }

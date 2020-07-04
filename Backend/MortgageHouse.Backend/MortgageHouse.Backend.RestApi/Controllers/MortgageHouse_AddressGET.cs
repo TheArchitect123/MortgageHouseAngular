@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MortgageHouse.Backend.Constants;
 using MortgageHouse.Backend.Extensions;
 using MortgageHouse.Backend.Services.Business;
 using Newtonsoft.Json;
@@ -13,6 +15,7 @@ namespace MortgageHouse.Backend.RestApi.Controllers
 {
     [Produces("plain/text")]
     [Route("api/[controller]")]
+    [Authorize(AuthenticationSchemes = (SecurityConstants.AuthenticationScheme))]
     [ApiController]
     public class MortgageHouse_AddressGET : ControllerBase
     {

@@ -3,6 +3,7 @@ using MortgageHouse.Backend.Domain.Entities;
 using MortgageHouse.Backend.Extensions;
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace MortgageHouse.Backend.CsvDriver.Repositories
@@ -31,11 +32,14 @@ namespace MortgageHouse.Backend.CsvDriver.Repositories
             return true;
         }
 
-        public IQueryable<Address> GetAddresses()
+        public IEnumerable<Address> GetAddresses()
         {
             try
             {
-                return _dbService.GetAllItems<Address>().AsQueryable();
+                var items = _dbService.GetAllItems<Address>(); ;
+                Console.WriteLine(items.Count());
+
+                return _dbService.GetAllItems<Address>();
             }
             catch (Exception ex)
             {
