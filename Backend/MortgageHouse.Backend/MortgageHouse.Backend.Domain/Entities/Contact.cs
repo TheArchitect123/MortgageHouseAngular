@@ -4,16 +4,12 @@ using System.Text;
 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 namespace MortgageHouse.Backend.Domain.Entities
 {
-    public class Contact
+    public class Contact : IEquatable<Contact>
     {
-        [Required]
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid Id { get; set; }
-        
         [Required]
         public string FirstName { get; set; }
         [Required]
@@ -26,5 +22,10 @@ namespace MortgageHouse.Backend.Domain.Entities
 
         [Required]
         public string DateOfBirth { get; set; }
+
+        public bool Equals([AllowNull] Contact other)
+        {
+            return true;
+        }
     }
 }

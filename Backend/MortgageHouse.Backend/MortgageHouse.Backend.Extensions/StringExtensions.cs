@@ -17,5 +17,4 @@ namespace MortgageHouse.Backend.Extensions
                 return json;
         }
     }
-
 }

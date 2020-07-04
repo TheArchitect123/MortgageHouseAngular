@@ -31,13 +31,15 @@ namespace MortgageHouse.Backend.RestApi
         {
             services.AddMvc(w => w.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
+
             //Services
             services.AddScoped<AddressService>()
-                .AddScoped<ContactsService>()
+                .AddScoped<ContactsService>();
 
-                 //Repositories
-                .AddScoped<IAddressRepository, AddressRepository>()
-            .AddScoped<IContactsRepository, ContactsRepository>();
+            //Repositories
+            services.AddDbContext<ContentDb>(w => w.use(DbConstants.ConnectionString)) //Configure the DbContext -- Set no Tracking
+           .AddScoped<IAddressRepository, AddressRepository>()
+       .AddScoped<IContactsRepository, ContactsRepository>();
 
             //Mapper
             AutoMapper.MapperConfiguration appConfig = new MapperConfiguration(c => c.AddProfile<GatewayMapper>());

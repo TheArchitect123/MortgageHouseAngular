@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "g/QECT7VMTLeEO/IP4s5/ZFdax7mAICaEaoqYVQsghtb7hOsPTV9cjDcN/pjTHywn77STb9mu078BTzdorzZxw==",
+  "dgSpecHash": "+tSqsu4qhxzIDDB/FD6+YlqwpPfhfNEuxLLS3KmQaEA2qCkr6P0tP3cE4U65X+kYdbldj796nAovDvhVJYVKjw==",
   "success": true,
   "projectFilePath": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Extensions\\MortgageHouse.Backend.Extensions.csproj",
   "expectedPackageFiles": [
@@ -10,9 +10,11 @@
     "C:\\Users\\Owner\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\system.diagnostics.eventlog\\4.7.0\\system.diagnostics.eventlog.4.7.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
   ],
   "logs": []

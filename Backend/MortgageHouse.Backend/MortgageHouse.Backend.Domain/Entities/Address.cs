@@ -2,16 +2,12 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 namespace MortgageHouse.Backend.Domain.Entities
 {
-    public class Address
+    public class Address : IEquatable<Address>
     {
-        [Required]
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid Id { get; set; }
-
         [Required]
         public string StreetNumber { get; set; }
 
@@ -24,5 +20,10 @@ namespace MortgageHouse.Backend.Domain.Entities
         public string Suburb { get; set; }
         [Required]
         public int Postcode { get; set; }
+
+        public bool Equals([AllowNull] Address other)
+        {
+            return true;
+        }
     }
 }

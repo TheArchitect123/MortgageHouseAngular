@@ -213,7 +213,11 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Helpers\\MortgageHouse.Backend.Helpers.csproj": {
+                "projectPath": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Helpers\\MortgageHouse.Backend.Helpers.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -370,6 +374,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
