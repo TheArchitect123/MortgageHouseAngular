@@ -3,6 +3,8 @@ using MortgageHouse.Backend.Domain.Entities;
 using MortgageHouse.Backend.Extensions;
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace MortgageHouse.Backend.CsvDriver.Repositories
@@ -31,27 +33,24 @@ namespace MortgageHouse.Backend.CsvDriver.Repositories
             return true;
         }
 
-        public IQueryable<Contact> GetContacts()
+        public IEnumerable<Contact> GetContacts()
         {
             try
             {
-              //  return _dbService.GetAllItems<Contact>().AsQueryable();
+                return _dbService.GetAll<Contact>("SELECT * FROM Contact");
             }
             catch (Exception ex)
             {
                 ex.HandleException();
                 throw new FieldAccessException("Failed to persist address in the csv");
             }
-
-            return null;
         }
 
         public Contact GetContactForName(string name)
         {
             try
             {
-
-                return null;
+                return _dbService.GetAll<Contact>($"SELECT * FROM Contact WHERE FirstName = '{name}'").SingleOrDefault();
             }
             catch (Exception ex)
             {

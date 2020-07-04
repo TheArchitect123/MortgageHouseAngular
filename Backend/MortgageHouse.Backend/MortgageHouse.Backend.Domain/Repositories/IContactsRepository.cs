@@ -10,6 +10,6 @@ namespace MortgageHouse.Backend.Domain.Entities
         bool AddContact(Contact model);
 
         Contact GetContactForName(string name);
-        IQueryable<Contact> GetContacts();
+        IEnumerable<Contact> GetContacts();
     }
 }

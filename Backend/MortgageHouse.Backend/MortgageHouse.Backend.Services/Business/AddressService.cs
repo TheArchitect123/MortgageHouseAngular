@@ -35,19 +35,7 @@ namespace MortgageHouse.Backend.Services.Business
             var addressItems = _commonRepo.GetAddresses();
             Console.WriteLine(addressItems.Count());
 
-            return addressItems == null ? throw new ArgumentNullException("Could not find any addresses") : addressItems.ToList().ConvertAll(w =>
-            {
-                try
-                {
-                    return _mapper.Map<Address, AddressDto>(w);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex);
-                }
-
-                return null;
-            });
+            return addressItems == null ? throw new ArgumentNullException("Could not find any addresses") : addressItems.ToList().ConvertAll(w => _mapper.Map<Address, AddressDto>(w));
         }
 
         public void WriteAddressForSpecifiedItem(AddressDto addressDto)

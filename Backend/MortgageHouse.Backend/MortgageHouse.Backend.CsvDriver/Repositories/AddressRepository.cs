@@ -51,7 +51,7 @@ namespace MortgageHouse.Backend.CsvDriver.Repositories
         {
             try
             {
-                return null;
+                return _dbService.GetAll<Address>($"SELECT * FROM Address WHERE StreetName = '{streetName}'").SingleOrDefault();
             }
             catch (Exception ex)
             {

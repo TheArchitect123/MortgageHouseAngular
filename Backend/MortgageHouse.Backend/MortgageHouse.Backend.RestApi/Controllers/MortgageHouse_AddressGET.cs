@@ -13,9 +13,9 @@ using Newtonsoft.Json;
 
 namespace MortgageHouse.Backend.RestApi.Controllers
 {
-    [Produces("plain/text")]
+    [Produces("text/plain")]
     [Route("api/[controller]")]
-    [Authorize(AuthenticationSchemes = (SecurityConstants.AuthenticationScheme))]
+    //   [Authorize(AuthenticationSchemes = (SecurityConstants.AuthenticationScheme))]
     [ApiController]
     public class MortgageHouse_AddressGET : ControllerBase
     {
@@ -35,7 +35,9 @@ namespace MortgageHouse.Backend.RestApi.Controllers
         {
             try
             {
-                return JsonConvert.SerializeObject(_addressMngr.GetAllAddresses());
+                var items = JsonConvert.SerializeObject(_addressMngr.GetAllAddresses());
+
+                return items;
             }
             catch (Exception ex)
             {
@@ -46,7 +48,7 @@ namespace MortgageHouse.Backend.RestApi.Controllers
 
         [HttpGet]
         [Route("/get_singleaddress")]
-        public ActionResult<string> GetAllAddresses([FromQuery] string streetName)
+        public ActionResult<string> GetSingleAddress([FromQuery] string streetName)
         {
             try
             {

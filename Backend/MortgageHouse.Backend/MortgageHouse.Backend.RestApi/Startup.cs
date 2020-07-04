@@ -50,6 +50,7 @@ namespace MortgageHouse.Backend.RestApi
 
             //Services
             services.AddScoped<AddressService>()
+                .AddScoped<ContactUnionAddressService>()
                 .AddScoped<ContactsService>();
 
             //Repositories

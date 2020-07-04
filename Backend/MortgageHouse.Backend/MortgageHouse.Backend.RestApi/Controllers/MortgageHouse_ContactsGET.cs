@@ -9,10 +9,10 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace MortgageHouse.Backend.RestApi.Controllers
 {
-    [Produces("plain/text")]
+    [Produces("text/plain")]
     [Route("api/[controller]")]
+    //   [Authorize(AuthenticationSchemes = (SecurityConstants.AuthenticationScheme))]
     [ApiController]
-    [Authorize(AuthenticationSchemes = (SecurityConstants.AuthenticationScheme))]
     public class MortgageHouse_ContactsGET : ControllerBase
     {
         public MortgageHouse_ContactsGET(IMapper mapper, ContactsService contactsMngr)
@@ -27,7 +27,7 @@ namespace MortgageHouse.Backend.RestApi.Controllers
 
         [HttpGet]
         [Route("/get_contacts")]
-        public ActionResult<string> GetAllAddresses()
+        public ActionResult<string> GetAllContacts()
         {
             try
             {
@@ -42,7 +42,7 @@ namespace MortgageHouse.Backend.RestApi.Controllers
 
         [HttpGet]
         [Route("/get_singlecontact")]
-        public ActionResult<string> GetAllAddresses([FromQuery] string firstName)
+        public ActionResult<string> GetSingleContact([FromQuery] string firstName)
         {
             try
             {
