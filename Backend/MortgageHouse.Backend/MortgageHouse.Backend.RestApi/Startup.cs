@@ -36,7 +36,7 @@ namespace MortgageHouse.Backend.RestApi
         {
             if (!File.Exists(DbConstants.ConnectionString))
             {
-                Directory.CreateDirectory(DbConstants.AccessConnectionString);
+                Directory.CreateDirectory(DbConstants.ConnectionStringDir);
                 File.Create(DbConstants.ConnectionString).Dispose();
             }
         }
