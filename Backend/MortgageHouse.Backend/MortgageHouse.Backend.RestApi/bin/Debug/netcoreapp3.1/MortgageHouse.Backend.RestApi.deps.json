@@ -1573,7 +1573,7 @@
           "MortgageHouse.Backend.Domain": "1.0.0",
           "MortgageHouse.Backend.Extensions": "1.0.0",
           "MortgageHouse.Backend.Helpers": "1.0.0",
-          "sqlite-net": "1.6.292"
+          "sqlite-net-pcl": "1.7.335"
         },
         "runtime": {
           "MortgageHouse.Backend.CsvDriver.dll": {}

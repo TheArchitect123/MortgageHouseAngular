@@ -1,4 +1,5 @@
 ﻿using MortgageHouse.Backend.Constants;
+using MortgageHouse.Backend.CsvDriver.Services;
 using MortgageHouse.Backend.Domain.Entities;
 using MortgageHouse.Backend.Extensions;
 using SQLitePCL;
@@ -11,18 +12,18 @@ namespace MortgageHouse.Backend.CsvDriver.Repositories
 {
     public class AddressRepository : IAddressRepository
     {
-        public AddressRepository(ContentDb dbService)
+        public AddressRepository(DatabaseSqliteAccess dbService)
         {
             _dbService = dbService;
         }
 
-        public ContentDb _dbService;
+        public DatabaseSqliteAccess _dbService;
 
         public bool AddAddress(Address model)
         {
             try
             {
-                _dbService.sAddresses.Add(model);
+                _dbService.Insert(model);
             }
             catch (Exception ex)
             {
@@ -37,7 +38,7 @@ namespace MortgageHouse.Backend.CsvDriver.Repositories
         {
             try
             {
-                return null;
+                return _dbService.GetAll<Address>("SELECT * FROM Address");
             }
             catch (Exception ex)
             {

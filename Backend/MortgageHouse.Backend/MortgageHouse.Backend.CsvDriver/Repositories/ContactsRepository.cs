@@ -1,4 +1,5 @@
-﻿using MortgageHouse.Backend.Domain.Entities;
+﻿using MortgageHouse.Backend.CsvDriver.Services;
+using MortgageHouse.Backend.Domain.Entities;
 using MortgageHouse.Backend.Extensions;
 
 using System;
@@ -8,18 +9,18 @@ namespace MortgageHouse.Backend.CsvDriver.Repositories
 {
     public class ContactsRepository : IContactsRepository
     {
-        public ContactsRepository(ContentDb dbService)
+        public ContactsRepository(DatabaseSqliteAccess dbService)
         {
             _dbService = dbService;
         }
 
-        public ContentDb _dbService;
+        public DatabaseSqliteAccess _dbService;
 
         public bool AddContact(Contact model)
         {
             try
             {
-              //  _dbService.Insert<Contact>(model);
+                _dbService.Insert(model);
             }
             catch (Exception ex)
             {

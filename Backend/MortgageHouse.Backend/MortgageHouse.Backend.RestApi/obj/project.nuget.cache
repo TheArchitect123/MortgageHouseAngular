@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "b4Ls97lcB5ijJy1vElC+NFp0lF8qzJs2e+FnUYMBZcPuRTS23ApgKdH9t8VFjIKwG5+BCoE3I7u/ZJ9jUKl5hg==",
+  "dgSpecHash": "MxBQaz72ZMa1e7LP1qgAY1SsJr/BWkCj0Cjr0RtCLyvxOv6v9qHkwpfwjgtGAy9c3E8OZFKli2tG4qhERyD/6g==",
   "success": true,
   "projectFilePath": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.RestApi\\MortgageHouse.Backend.RestApi.csproj",
   "expectedPackageFiles": [

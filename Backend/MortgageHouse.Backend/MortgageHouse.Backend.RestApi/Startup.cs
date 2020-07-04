@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using MortgageHouse.Backend.Constants;
 using MortgageHouse.Backend.CsvDriver;
 using MortgageHouse.Backend.CsvDriver.Repositories;
+using MortgageHouse.Backend.CsvDriver.Services;
 using MortgageHouse.Backend.Domain.Entities;
 using MortgageHouse.Backend.Domain.ServiceArtifacts;
 using MortgageHouse.Backend.RestApi.Mapper;
@@ -40,18 +41,10 @@ namespace MortgageHouse.Backend.RestApi
             }
         }
 
-        private void InitializeSchema()
-        {
-            SQLiteConnection connection = new SQLiteConnection(new SQLiteConnectionString(DbConstants.AccessConnectionString, false));
-            connection.CreateTable<Contact>();
-            connection.CreateTable<Address>();
-        }
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             InitializeDatabase();
-            InitializeSchema();
 
             services.AddMvc(w => w.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
@@ -60,8 +53,7 @@ namespace MortgageHouse.Backend.RestApi
                 .AddScoped<ContactsService>();
 
             //Repositories
-            services.AddDbContext<ContentDb>(w => w.UseSqlite(DbConstants.AccessConnectionString)) //Configure the DbContext -- Set no Tracking 
-         .AddScoped<IAddressRepository, AddressRepository>()
+            services.AddScoped<DatabaseSqliteAccess>().AddScoped<IAddressRepository, AddressRepository>()
      .AddScoped<IContactsRepository, ContactsRepository>();
 
             //Mapper
