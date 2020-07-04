@@ -1,27 +1,28 @@
-﻿using MortgageHouse.Backend.CsvDriver.Services;
+﻿using MortgageHouse.Backend.Constants;
 using MortgageHouse.Backend.Domain.Entities;
 using MortgageHouse.Backend.Extensions;
-
+using SQLitePCL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 
 namespace MortgageHouse.Backend.CsvDriver.Repositories
 {
     public class AddressRepository : IAddressRepository
     {
-        public AddressRepository(DatabaseService dbService)
+        public AddressRepository(ContentDb dbService)
         {
             _dbService = dbService;
         }
 
-        public DatabaseService _dbService;
+        public ContentDb _dbService;
 
         public bool AddAddress(Address model)
         {
             try
             {
-                _dbService.Insert<Address>(model);
+                _dbService.sAddresses.Add(model);
             }
             catch (Exception ex)
             {
@@ -36,10 +37,7 @@ namespace MortgageHouse.Backend.CsvDriver.Repositories
         {
             try
             {
-                var items = _dbService.GetAllItems<Address>(); ;
-                Console.WriteLine(items.Count());
-
-                return _dbService.GetAllItems<Address>();
+                return null;
             }
             catch (Exception ex)
             {
@@ -52,7 +50,7 @@ namespace MortgageHouse.Backend.CsvDriver.Repositories
         {
             try
             {
-                return _dbService.GetAllItems<Address>().SingleOrDefault(w => w.StreetName.Equals(streetName, StringComparison.OrdinalIgnoreCase));
+                return null;
             }
             catch (Exception ex)
             {
@@ -63,7 +61,10 @@ namespace MortgageHouse.Backend.CsvDriver.Repositories
 
         public bool SaveChanges()
         {
-            throw new NotImplementedException();
+            try { _dbService.SaveChanges(); }
+            catch { return false; }
+
+            return true;
         }
     }
 }

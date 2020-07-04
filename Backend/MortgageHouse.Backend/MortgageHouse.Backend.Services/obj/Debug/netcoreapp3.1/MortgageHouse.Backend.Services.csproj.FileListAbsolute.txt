@@ -2,11 +2,13 @@ C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHous
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.Services.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.Services.pdb
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.Constants.dll
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.CsvDriver.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.Domain.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.Dto.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.Extensions.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.Helpers.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.Constants.pdb
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.CsvDriver.pdb
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.Domain.pdb
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.Dto.pdb
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.Extensions.pdb
@@ -14,9 +16,7 @@ C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHous
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\obj\Debug\netcoreapp3.1\MortgageHouse.Backend.Services.csprojAssemblyReference.cache
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\obj\Debug\netcoreapp3.1\MortgageHouse.Backend.Services.AssemblyInfoInputs.cache
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\obj\Debug\netcoreapp3.1\MortgageHouse.Backend.Services.AssemblyInfo.cs
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\obj\Debug\netcoreapp3.1\MortgageHouse.Backend.Services.csproj.CoreCompileInputs.cache
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\obj\Debug\netcoreapp3.1\MortgageHouse.Backend.Services.csproj.CopyComplete
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\obj\Debug\netcoreapp3.1\MortgageHouse.Backend.Services.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\obj\Debug\netcoreapp3.1\MortgageHouse.Backend.Services.pdb
-C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.CsvDriver.dll
-C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.CsvDriver.pdb
-C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\obj\Debug\netcoreapp3.1\MortgageHouse.Backend.Services.csproj.CoreCompileInputs.cache

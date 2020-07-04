@@ -4,6 +4,7 @@ using System.Text;
 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using CsvHelper.Configuration.Attributes;
 
 namespace MortgageHouse.Backend.Domain.Entities
 {
@@ -13,11 +14,13 @@ namespace MortgageHouse.Backend.Domain.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
-        
+
         [Required]
         public string FirstName { get; set; }
+
         [Required]
         public string MiddleName { get; set; }
+
         [Required]
         public string LastName { get; set; }
 

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -7,18 +8,21 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MortgageHouse.Backend.Constants;
+using MortgageHouse.Backend.CsvDriver;
 using MortgageHouse.Backend.CsvDriver.Repositories;
-using MortgageHouse.Backend.CsvDriver.Services;
 using MortgageHouse.Backend.Domain.Entities;
 using MortgageHouse.Backend.Domain.ServiceArtifacts;
 using MortgageHouse.Backend.RestApi.Mapper;
 using MortgageHouse.Backend.RestApi.Middleware;
 using MortgageHouse.Backend.Services.Business;
 using MortgageHouse.Backend.Services.Security;
+
+using SQLite;
 
 namespace MortgageHouse.Backend.RestApi
 {
@@ -27,21 +31,38 @@ namespace MortgageHouse.Backend.RestApi
         public Startup(IConfiguration configuration) => Configuration = configuration;
         public IConfiguration Configuration { get; }
 
+        private void InitializeDatabase()
+        {
+            if (!File.Exists(DbConstants.ConnectionString))
+            {
+                Directory.CreateDirectory(DbConstants.AccessConnectionString);
+                File.Create(DbConstants.ConnectionString).Dispose();
+            }
+        }
+
+        private void InitializeSchema()
+        {
+            SQLiteConnection connection = new SQLiteConnection(new SQLiteConnectionString(DbConstants.AccessConnectionString, false));
+            connection.CreateTable<Contact>();
+            connection.CreateTable<Address>();
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc(w => w.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            InitializeDatabase();
+            InitializeSchema();
 
+            services.AddMvc(w => w.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
             //Services
             services.AddScoped<AddressService>()
                 .AddScoped<ContactsService>();
 
             //Repositories
-            services.AddScoped<DatabaseService>() //Configure the DbContext used for reading and writing to the csv file
-           .AddScoped<IAddressRepository, AddressRepository>()
-       .AddScoped<IContactsRepository, ContactsRepository>();
+            services.AddDbContext<ContentDb>(w => w.UseSqlite(DbConstants.AccessConnectionString)) //Configure the DbContext -- Set no Tracking 
+         .AddScoped<IAddressRepository, AddressRepository>()
+     .AddScoped<IContactsRepository, ContactsRepository>();
 
             //Mapper
             AutoMapper.MapperConfiguration appConfig = new MapperConfiguration(c => c.AddProfile<GatewayMapper>());

@@ -1,5 +1,4 @@
-﻿using MortgageHouse.Backend.CsvDriver.Services;
-using MortgageHouse.Backend.Domain.Entities;
+﻿using MortgageHouse.Backend.Domain.Entities;
 using MortgageHouse.Backend.Extensions;
 
 using System;
@@ -9,18 +8,18 @@ namespace MortgageHouse.Backend.CsvDriver.Repositories
 {
     public class ContactsRepository : IContactsRepository
     {
-        public ContactsRepository(DatabaseService dbService)
+        public ContactsRepository(ContentDb dbService)
         {
             _dbService = dbService;
         }
 
-        public DatabaseService _dbService;
+        public ContentDb _dbService;
 
         public bool AddContact(Contact model)
         {
             try
             {
-                _dbService.Insert<Contact>(model);
+              //  _dbService.Insert<Contact>(model);
             }
             catch (Exception ex)
             {
@@ -35,20 +34,23 @@ namespace MortgageHouse.Backend.CsvDriver.Repositories
         {
             try
             {
-                return _dbService.GetAllItems<Contact>().AsQueryable();
+              //  return _dbService.GetAllItems<Contact>().AsQueryable();
             }
             catch (Exception ex)
             {
                 ex.HandleException();
                 throw new FieldAccessException("Failed to persist address in the csv");
             }
+
+            return null;
         }
 
         public Contact GetContactForName(string name)
         {
             try
             {
-                return _dbService.GetAllItems<Contact>().SingleOrDefault(w => w.FirstName.Equals(name));
+
+                return null;
             }
             catch (Exception ex)
             {

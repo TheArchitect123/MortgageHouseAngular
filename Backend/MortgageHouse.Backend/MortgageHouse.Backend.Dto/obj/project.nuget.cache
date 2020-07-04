@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "NPFFWxxJQ074D8yuV1o277R5CtZLwrnk7e8ubwqYK63koLdbr/99tgQ09kvyCrl20Ztm7ljAYMWfnNL/Yh+FAg==",
+  "dgSpecHash": "AyJ+xoHjJOSgkkQdcxJOQsVpUBMNo4v7CTS5INwb7PIcNvTiO+mocU+hvrfWl1UptCIusXdFmo+NxUjJCmIhZg==",
   "success": true,
   "projectFilePath": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Dto\\MortgageHouse.Backend.Dto.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Owner\\.nuget\\packages\\csvhelper\\15.0.5\\csvhelper.15.0.5.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

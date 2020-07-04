@@ -22,9 +22,9 @@ namespace MortgageHouse.Backend.RestApi.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize(AuthenticationSchemes = (SecurityConstants.AuthenticationScheme))]
-    public class MortgageHouse_AddressPOST : ControllerBase
+    public class MortgageHouse_UnionPOST : ControllerBase
     {
-        public MortgageHouse_AddressPOST(IMapper mapper, AddressService addressMngr)
+        public MortgageHouse_UnionPOST(IMapper mapper, AddressService addressMngr)
         {
             _addressMngr = addressMngr;
             _mapper = mapper;
@@ -35,7 +35,7 @@ namespace MortgageHouse.Backend.RestApi.Controllers
         private readonly AddressService _addressMngr;
 
         [HttpPost]
-        [Route("/seed_address")]
+        [Route("/seed_data")]
         public ActionResult<string> SeedNewAddressData()
         {
             try

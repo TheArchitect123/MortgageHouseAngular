@@ -1,12 +1,12 @@
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Extensions\bin\Debug\netstandard2.0\MortgageHouse.Backend.Extensions.deps.json
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Extensions\bin\Debug\netstandard2.0\MortgageHouse.Backend.Extensions.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Extensions\bin\Debug\netstandard2.0\MortgageHouse.Backend.Extensions.pdb
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Extensions\bin\Debug\netstandard2.0\MortgageHouse.Backend.Helpers.dll
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Extensions\bin\Debug\netstandard2.0\MortgageHouse.Backend.Helpers.pdb
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Extensions\obj\Debug\netstandard2.0\MortgageHouse.Backend.Extensions.csprojAssemblyReference.cache
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Extensions\obj\Debug\netstandard2.0\MortgageHouse.Backend.Extensions.AssemblyInfoInputs.cache
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Extensions\obj\Debug\netstandard2.0\MortgageHouse.Backend.Extensions.AssemblyInfo.cs
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Extensions\obj\Debug\netstandard2.0\MortgageHouse.Backend.Extensions.csproj.CoreCompileInputs.cache
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Extensions\obj\Debug\netstandard2.0\MortgageHouse.Backend.Extensions.csproj.CopyComplete
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Extensions\obj\Debug\netstandard2.0\MortgageHouse.Backend.Extensions.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Extensions\obj\Debug\netstandard2.0\MortgageHouse.Backend.Extensions.pdb
-C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Extensions\bin\Debug\netstandard2.0\MortgageHouse.Backend.Helpers.dll
-C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Extensions\bin\Debug\netstandard2.0\MortgageHouse.Backend.Helpers.pdb
-C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Extensions\obj\Debug\netstandard2.0\MortgageHouse.Backend.Extensions.csproj.CopyComplete

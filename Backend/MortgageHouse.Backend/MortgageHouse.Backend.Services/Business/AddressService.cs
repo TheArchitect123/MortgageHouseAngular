@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using MortgageHouse.Backend.Constants;
-using MortgageHouse.Backend.CsvDriver.Services;
 using MortgageHouse.Backend.Domain.Entities;
 using MortgageHouse.Backend.Domain.ServiceArtifacts;
 using MortgageHouse.Backend.Dto;
@@ -54,6 +53,7 @@ namespace MortgageHouse.Backend.Services.Business
         public void WriteAddressForSpecifiedItem(AddressDto addressDto)
         {
             _commonRepo.AddAddress(_mapper.Map<AddressDto, Address>(addressDto));
+            _commonRepo.SaveChanges();
         }
 
         public async Task WriteAddressForSpecifiedItemAsync(AddressDto addressDto)
