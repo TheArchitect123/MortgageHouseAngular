@@ -1,5 +1,6 @@
 ﻿using CsvHelper;
 using MortgageHouse.Backend.Constants;
+using MortgageHouse.Backend.CsvDriver.Maps;
 using MortgageHouse.Backend.Domain.Entities;
 using System;
 using System.Collections;
@@ -17,22 +18,26 @@ namespace MortgageHouse.Backend.CsvDriver.Services
 
         public DatabaseService()
         {
-            //Initialize the headers for each entity
-            using (var reader = CreateReaderForDb())
+            //Initialize the headers for each entity & create the csv file if it does not yet exist
+            if (!File.Exists(_databasePath))
             {
+                Directory.CreateDirectory(DbConstants.ConnectionStringDir);
+                File.Create(_databasePath).Dispose();
                 using (var writer = CreateWriterForDb())
                 {
-                    try
-                    {
-                        reader.ValidateHeader<Address>();
-                    }
-                    catch
-                    {
-                        //Headers do not exist (make sure to create them for the first time)
-                        writer.WriteHeader<Address>();
-                        writer.WriteHeader<Contact>();
-                    }
+                    writer.Configuration.RegisterClassMap<AddressMaps>();
+                    writer.WriteHeader(typeof(AddressMaps));
+
+
+                    writer.Configuration.RegisterClassMap<ContactsMaps>();
+                    writer.WriteHeader(typeof(ContactsMaps));
                 }
+
+                //using (var item = CreateWriterForDb())
+                //{
+                //    item.Configuration.RegisterClassMap<ContactsMaps>();
+                //    item.WriteField(typeof(ContactsMaps));
+                //}
             }
         }
 

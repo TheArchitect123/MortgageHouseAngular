@@ -1,0 +1,9 @@
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Helpers\bin\Release\netstandard2.0\MortgageHouse.Backend.Helpers.deps.json
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Helpers\bin\Release\netstandard2.0\MortgageHouse.Backend.Helpers.dll
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Helpers\bin\Release\netstandard2.0\MortgageHouse.Backend.Helpers.pdb
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Helpers\obj\Release\netstandard2.0\MortgageHouse.Backend.Helpers.csprojAssemblyReference.cache
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Helpers\obj\Release\netstandard2.0\MortgageHouse.Backend.Helpers.AssemblyInfoInputs.cache
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Helpers\obj\Release\netstandard2.0\MortgageHouse.Backend.Helpers.AssemblyInfo.cs
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Helpers\obj\Release\netstandard2.0\MortgageHouse.Backend.Helpers.csproj.CoreCompileInputs.cache
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Helpers\obj\Release\netstandard2.0\MortgageHouse.Backend.Helpers.dll
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Helpers\obj\Release\netstandard2.0\MortgageHouse.Backend.Helpers.pdb

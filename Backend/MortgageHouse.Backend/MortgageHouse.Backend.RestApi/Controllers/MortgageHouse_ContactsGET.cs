@@ -33,7 +33,7 @@ namespace MortgageHouse.Backend.RestApi.Controllers
             catch (Exception ex)
             {
                 ex.HandleException();
-                return "Could not find any addresses for this query";
+                return "Could not find any contacts for this query";
             }
         }
 
@@ -48,7 +48,7 @@ namespace MortgageHouse.Backend.RestApi.Controllers
             catch (Exception ex)
             {
                 ex.HandleException();
-                return $"Could not find an address for the name {firstName}";
+                return $"Could not find a contact for the name {firstName}";
             }
         }
     }
