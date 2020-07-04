@@ -84,7 +84,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "netcoreapp3.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -92,7 +92,7 @@
           "https://nuget.telerik.com/nuget": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "netcoreapp3.0": {
             "projectReferences": {
               "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Constants\\MortgageHouse.Backend.Constants.csproj": {
                 "projectPath": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Constants\\MortgageHouse.Backend.Constants.csproj"
@@ -116,7 +116,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "netcoreapp3.0": {
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -189,7 +189,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "netcoreapp3.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -197,7 +197,7 @@
           "https://nuget.telerik.com/nuget": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "netcoreapp3.0": {
             "projectReferences": {}
           }
         },
@@ -208,7 +208,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "netcoreapp3.0": {
           "dependencies": {
             "CsvHelper": {
               "target": "Package",

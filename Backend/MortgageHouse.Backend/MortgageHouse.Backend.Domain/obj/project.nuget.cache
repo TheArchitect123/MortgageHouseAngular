@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PsOmKD47IdsXOSs1WGFBYE7dC7sweohwPRTvcg2wWUSvE0yZb+MdbXROooG8+BeGthL824N7juTyQKKupLeodw==",
+  "dgSpecHash": "W10ELoY0yEOykn4Roq4QJXCjarU139LQb9mCgBzHLffuB4EPolDjjd1vcV5xPa2EHjFHbneHhl8mwfZ9mPJwNg==",
   "success": true,
   "projectFilePath": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Domain\\MortgageHouse.Backend.Domain.csproj",
   "expectedPackageFiles": [

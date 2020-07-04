@@ -1,0 +1,9 @@
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Domain\bin\Debug\netcoreapp3.0\MortgageHouse.Backend.Domain.deps.json
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Domain\bin\Debug\netcoreapp3.0\MortgageHouse.Backend.Domain.dll
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Domain\bin\Debug\netcoreapp3.0\MortgageHouse.Backend.Domain.pdb
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Domain\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.Domain.csprojAssemblyReference.cache
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Domain\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.Domain.AssemblyInfoInputs.cache
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Domain\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.Domain.AssemblyInfo.cs
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Domain\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.Domain.csproj.CoreCompileInputs.cache
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Domain\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.Domain.dll
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Domain\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.Domain.pdb
