@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Linq;
 
 namespace MortgageHouse.Backend.Domain.Entities
@@ -7,7 +8,7 @@ namespace MortgageHouse.Backend.Domain.Entities
     {
         bool AddAddress(Address model);
 
-        IQueryable<Address> GetAddressForID();
+        Address GetAddressForID(string streetName);
         IQueryable<Address> GetAddresses();
     }
 }

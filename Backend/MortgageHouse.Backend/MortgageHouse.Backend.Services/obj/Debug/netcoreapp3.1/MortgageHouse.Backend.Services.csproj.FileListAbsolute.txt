@@ -17,3 +17,6 @@ C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHous
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\obj\Debug\netcoreapp3.1\MortgageHouse.Backend.Services.csproj.CopyComplete
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\obj\Debug\netcoreapp3.1\MortgageHouse.Backend.Services.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\obj\Debug\netcoreapp3.1\MortgageHouse.Backend.Services.pdb
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.CsvDriver.dll
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\bin\Debug\netcoreapp3.1\MortgageHouse.Backend.CsvDriver.pdb
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.Services\obj\Debug\netcoreapp3.1\MortgageHouse.Backend.Services.csproj.CoreCompileInputs.cache

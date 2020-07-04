@@ -53,3 +53,6 @@ C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHous
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.1\EFCore.Seeder.dll
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\obj\Debug\netcoreapp3.1\MortgageHouse.Backend.RestApi.csproj.CoreCompileInputs.cache
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\obj\Debug\netcoreapp3.1\MortgageHouse.Backend.RestApi.MvcApplicationPartsAssemblyInfo.cache

@@ -1,28 +1,60 @@
-﻿using MortgageHouse.Backend.Domain.Entities;
+﻿using MortgageHouse.Backend.CsvDriver.Services;
+using MortgageHouse.Backend.Domain.Entities;
+using MortgageHouse.Backend.Extensions;
+
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace MortgageHouse.Backend.CsvDriver.Repositories
 {
     public class AddressRepository : IAddressRepository
     {
-        //Write the data to the Csv
+        public AddressRepository(DatabaseService dbService)
+        {
+            _dbService = dbService;
+        }
+
+        public DatabaseService _dbService;
 
         public bool AddAddress(Address model)
         {
+            try
+            {
+                _dbService.Insert<Address>(model);
+            }
+            catch (Exception ex)
+            {
+                ex.HandleException();
+                throw new FieldAccessException("Failed to persist address in the csv");
+            }
 
+            return true;
         }
 
         public IQueryable<Address> GetAddresses()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return _dbService.GetAllItems<Address>().AsQueryable();
+            }
+            catch (Exception ex)
+            {
+                ex.HandleException();
+                throw new FieldAccessException("Failed to persist address in the csv");
+            }
         }
 
-        public IQueryable<Address> GetAddressForID()
+        public Address GetAddressForID(string streetName)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return _dbService.GetAllItems<Address>().SingleOrDefault(w => w.StreetName.Equals(streetName, StringComparison.OrdinalIgnoreCase));
+            }
+            catch (Exception ex)
+            {
+                ex.HandleException();
+                throw new FieldAccessException("Failed to persist address in the csv");
+            }
         }
 
         public bool SaveChanges()

@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MortgageHouse.Backend.Constants;
 using MortgageHouse.Backend.CsvDriver.Repositories;
+using MortgageHouse.Backend.CsvDriver.Services;
 using MortgageHouse.Backend.Domain.Entities;
 using MortgageHouse.Backend.Domain.ServiceArtifacts;
 using MortgageHouse.Backend.RestApi.Mapper;
@@ -26,6 +27,7 @@ namespace MortgageHouse.Backend.RestApi
         public Startup(IConfiguration configuration) => Configuration = configuration;
         public IConfiguration Configuration { get; }
 
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -37,7 +39,7 @@ namespace MortgageHouse.Backend.RestApi
                 .AddScoped<ContactsService>();
 
             //Repositories
-            services.AddDbContext<ContentDb>(w => w.use(DbConstants.ConnectionString)) //Configure the DbContext -- Set no Tracking
+            services.AddScoped<DatabaseService>() //Configure the DbContext used for reading and writing to the csv file
            .AddScoped<IAddressRepository, AddressRepository>()
        .AddScoped<IContactsRepository, ContactsRepository>();
 

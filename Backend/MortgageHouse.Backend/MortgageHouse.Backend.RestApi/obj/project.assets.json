@@ -519,6 +519,7 @@
         "dependencies": {
           "AutoMapper": "10.0.0",
           "MortgageHouse.Backend.Constants": "1.0.0",
+          "MortgageHouse.Backend.CsvDriver": "1.0.0",
           "MortgageHouse.Backend.Domain": "1.0.0",
           "MortgageHouse.Backend.Dto": "1.0.0",
           "MortgageHouse.Backend.Extensions": "1.0.0",

@@ -65,6 +65,101 @@
         }
       }
     },
+    "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.CsvDriver\\MortgageHouse.Backend.CsvDriver.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.CsvDriver\\MortgageHouse.Backend.CsvDriver.csproj",
+        "projectName": "MortgageHouse.Backend.CsvDriver",
+        "projectPath": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.CsvDriver\\MortgageHouse.Backend.CsvDriver.csproj",
+        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
+        "outputPath": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.CsvDriver\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Constants\\MortgageHouse.Backend.Constants.csproj": {
+                "projectPath": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Constants\\MortgageHouse.Backend.Constants.csproj"
+              },
+              "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Domain\\MortgageHouse.Backend.Domain.csproj": {
+                "projectPath": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Domain\\MortgageHouse.Backend.Domain.csproj"
+              },
+              "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Extensions\\MortgageHouse.Backend.Extensions.csproj": {
+                "projectPath": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Extensions\\MortgageHouse.Backend.Extensions.csproj"
+              },
+              "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Helpers\\MortgageHouse.Backend.Helpers.csproj": {
+                "projectPath": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Helpers\\MortgageHouse.Backend.Helpers.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[15.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Domain\\MortgageHouse.Backend.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -350,6 +445,9 @@
             "projectReferences": {
               "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Constants\\MortgageHouse.Backend.Constants.csproj": {
                 "projectPath": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Constants\\MortgageHouse.Backend.Constants.csproj"
+              },
+              "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.CsvDriver\\MortgageHouse.Backend.CsvDriver.csproj": {
+                "projectPath": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.CsvDriver\\MortgageHouse.Backend.CsvDriver.csproj"
               },
               "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Domain\\MortgageHouse.Backend.Domain.csproj": {
                 "projectPath": "C:\\MortgageHouse\\MortgageHouseAngular\\Backend\\MortgageHouse.Backend\\MortgageHouse.Backend.Domain\\MortgageHouse.Backend.Domain.csproj"

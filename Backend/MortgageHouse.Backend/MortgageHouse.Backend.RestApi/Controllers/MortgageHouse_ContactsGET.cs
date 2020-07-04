@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MortgageHouse.Backend.Services.Business;
+using MortgageHouse.Backend.Extensions;
+using Newtonsoft.Json;
 
 namespace MortgageHouse.Backend.RestApi.Controllers
 {
@@ -23,5 +21,35 @@ namespace MortgageHouse.Backend.RestApi.Controllers
         //Services & Dependencies
         private readonly IMapper _mapper;
         private readonly ContactsService _contactsMngr;
+
+        [HttpGet]
+        [Route("/get_contacts")]
+        public ActionResult<string> GetAllAddresses()
+        {
+            try
+            {
+                return JsonConvert.SerializeObject(_contactsMngr.GetAllContacts());
+            }
+            catch (Exception ex)
+            {
+                ex.HandleException();
+                return "Could not find any addresses for this query";
+            }
+        }
+
+        [HttpGet]
+        [Route("/get_singlecontact")]
+        public ActionResult<string> GetAllAddresses([FromQuery] string firstName)
+        {
+            try
+            {
+                return JsonConvert.SerializeObject(_contactsMngr.GetContactForSpecifiedName(firstName));
+            }
+            catch (Exception ex)
+            {
+                ex.HandleException();
+                return $"Could not find an address for the name {firstName}";
+            }
+        }
     }
 }

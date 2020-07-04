@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MortgageHouse.Backend.Constants\MortgageHouse.Backend.Constants.csproj" />
+    <ProjectReference Include="..\MortgageHouse.Backend.CsvDriver\MortgageHouse.Backend.CsvDriver.csproj" />
     <ProjectReference Include="..\MortgageHouse.Backend.Domain\MortgageHouse.Backend.Domain.csproj" />
     <ProjectReference Include="..\MortgageHouse.Backend.Dto\MortgageHouse.Backend.Dto.csproj" />
     <ProjectReference Include="..\MortgageHouse.Backend.Extensions\MortgageHouse.Backend.Extensions.csproj" />
