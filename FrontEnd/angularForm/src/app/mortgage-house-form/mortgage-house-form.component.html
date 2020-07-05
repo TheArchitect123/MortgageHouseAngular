@@ -1,47 +1,92 @@
 <div class="container">
   <div [hidden]="submitted">
     <h1>Mortgage House Form</h1>
-    <form #heroForm="ngForm">
+
+    <form #mortageForm="ngForm">
+      <h2>Contact Details</h2>
       <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" required [(ngModel)]="viewModel.contactDto.FirstName"
-          name="name" #name="ngModel">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" required [(ngModel)]="dtoObj.contactDto.FirstName"
+          name="firstName" #name="ngModel">
+        <div [hidden]="!name.dirty" class="alert alert-danger">
+          This field is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="middleName">Middle Name</label>
+        <input type="text" class="form-control" id="middleName" name="middleName">
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" required [(ngModel)]="dtoObj.contactDto.LastName"
+          name="lastName" #name="ngModel">
         <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-          Name is required
+          This field is required
         </div>
       </div>
 
       <div class="form-group">
-        <label for="alterEgo">Alter Ego</label>
-        <input type="text" class="form-control" id="alterEgo" [(ngModel)]="viewModel.contactDto.FirstName"
-          name="alterEgo">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" class="form-control" id="phoneNumber" required [(ngModel)]="dtoObj.contactDto.DateOfBirth"
+          name="phoneNumber" #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          This field is required
+        </div>
       </div>
 
       <div class="form-group">
-        <label for="power">Hero Power</label>
-        <select class="form-control" id="power" required [(ngModel)]="viewModel.contactDto.FirstName" name="power"
-          #power="ngModel">
-          <!-- <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option> -->
+        <label for="DOB">Date of Birth</label>
+        <input type="text" class="form-control" id="DOB" required [(ngModel)]="dtoObj.contactDto.DateOfBirth" name="DOB"
+          #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          This field is required
+        </div>
+      </div>
+
+      <h2>Address Details</h2>
+      <div class="form-group">
+        <label for="streetNumber">Street Number</label>
+        <input type="text" class="form-control" id="streetNumber" required [(ngModel)]="dtoObj.addressDto.StreetNumber"
+          name="streetNumber" #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          This field is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="streetOption">Street Type</label>
+        <select class="form-control" id="streetOption" required [(ngModel)]="dtoObj.addressDto.StreetOption"
+          name="streetOption" #streetOption="ngModel">
+          <option *ngFor="let item of streetOptions" [value]="0">{{item}}</option>
+          <option *ngFor="let item of streetOptions" [value]="1">{{item}}</option>
+          <option *ngFor="let item of streetOptions" [value]="2">{{item}}</option>
         </select>
-        <div [hidden]="power.valid || power.pristine" class="alert alert-danger">
-          Power is required
+        <div [hidden]="streetOption.valid || streetOption.pristine" class="alert alert-danger">
+          Please select a valid street type
         </div>
       </div>
 
-      <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
-      <button type="button" class="btn btn-default">New Hero</button>
-      <i>with</i> reset
-
-      &nbsp;&nbsp;
-      <button type="button" class="btn btn-default">New Hero</button>
-      <i>without</i> reset
-
-      <!-- NOT SHOWN IN DOCS -->
-      <div>
-        <hr>
-        <!-- Name via form.controls = {{showFormControls(heroForm)}} -->
+      <div class="form-group">
+        <label for="suburb">Suburb</label>
+        <input type="text" class="form-control" id="suburb" required [(ngModel)]="dtoObj.addressDto.Suburb"
+          name="suburb" #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          This field is required
+        </div>
       </div>
-      <!-- - -->
+
+      <div class="form-group">
+        <label for="postcode">Postcode</label>
+        <input type="number" class="form-control" id="postcode" required [(ngModel)]="dtoObj.addressDto.Suburb"
+          name="postcode" #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          This field is required
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-outline-success" [disabled]="!mortageForm.form.valid">Submit</button>
     </form>
   </div>
 </div>

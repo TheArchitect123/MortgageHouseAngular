@@ -12,7 +12,8 @@ export class MortgageFormComponent {
   submitted = false;
 
   //ViewModel
-  viewModel: UnionDetails;
+  dtoObj: UnionDetails;
+  streetOptions = ['Street', 'Avenue', 'Court'];
 
   /////////////////////////////
 }
