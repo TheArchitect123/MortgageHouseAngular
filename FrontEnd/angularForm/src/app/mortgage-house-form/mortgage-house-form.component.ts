@@ -25,14 +25,8 @@ export class MortgageFormComponent implements OnInit {
     //Initialize the model -- for processing
     this.initializeModel();
   }
-
   isSubmissionEnabled(): boolean {
     var result: boolean = true;
-
-    // result = StringHelper.existValueInEnum(
-    //   typeof StreetType,
-    //   this.dtoObj.AddressItem.StreetOption
-    // );
 
     result = this.dtoObj.AddressItem.StreetOption != null;
     result = Number.isInteger(this.dtoObj.AddressItem.Postcode);
@@ -87,6 +81,7 @@ export class MortgageFormComponent implements OnInit {
 
   //Data Binding
   dtoObj: ContactAddressDto;
+
   streetOptions = ['Street', 'Avenue', 'Court'];
 
   async submitFormToServer() {
@@ -98,11 +93,11 @@ export class MortgageFormComponent implements OnInit {
       this.gateway
         .SendInfoToRemoteServer(JSON.stringify(this.dtoObj))
         .subscribe((e: boolean) => {
-          if (e)
+          if (e) {
             alert('Successfuly submitted form (contact & address details)');
-          else alert('Failed to send account information to the server');
+            this.resetFormData(); //Reset the form data after a successful send to the server
+          } else alert('Failed to send account information to the server');
         });
-      //Force a reset once the item is successfully
     } else {
       alert(
         'Cannot submit the form details to the server. Please fill out all the fields before resubmitting'

@@ -5,9 +5,60 @@
 </style>
 
 <script>
+    let regex_postcode = "/^[0-9]{4}$/";
+    let regex_phoneNumber = "/^[0-9]{10}$/";
+    let regex_streetNumber = '/^[a-zA-Z]^[0-9]{1}$/';
+    let regex_contactName = "/^[a-zA-Z]{3,}$/";
+
+    //Contact Details
+    function firstNameResult() {
+        return document.querySelector('firstName').innerHTML
+    }
+
+    function middleNameResult() {
+        return document.querySelector('middleName').innerHTML
+    }
+
+    function lastNameResult() {
+        return document.querySelector('lastName').innerHTML
+    }
+
+    function phoneNumberResult() {
+        return document.querySelector('phoneNumber').innerHTML
+    }
+
+    function dateOfBirthResult() {
+        return document.querySelector('DOB').innerHTML
+    }
+
+    //Address Details
+
+
+
+
+
     function configureUIComponents() {
 
+        //Read the regular expression and check to see that each field on the form has conformed to the correct format
+        //If any of them fail, then the submit is disabled, else it is enabled
 
+        document.getElementById('firstName').addEventListener('onfocusout', () => {
+
+            //Read the string and compare the query
+            if (!firstNameResult().match(regex_contactName)) {
+
+                //Show the error and update the div entry
+                alert('FIRST NAME BROKEN');
+            }
+
+            alert('FIRST NAME BROKEN');
+        });
+    }
+
+
+
+    function confirmFormSubmission() {
+        //Check the regular expressions to see if the user has typed in the correct details
     }
 
     // function resetAllData() {
