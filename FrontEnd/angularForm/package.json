@@ -1,8 +1,8 @@
 {
-  "name": "angular-io-example",
+  "name": "mortgagehouse-angular",
   "version": "1.0.0",
   "private": true,
-  "description": "Example project from an angular.io guide.",
+  "description": "A small rest api based angular app",
   "scripts": {
     "ng": "ng",
     "build": "ng build",
