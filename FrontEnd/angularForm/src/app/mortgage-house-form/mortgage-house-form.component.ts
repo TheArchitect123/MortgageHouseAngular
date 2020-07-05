@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { UnionDetails } from '../models/unionDetails';
-import { from } from 'rxjs';
 
 //Models
 @Component({
@@ -11,9 +10,7 @@ import { from } from 'rxjs';
 export class MortgageFormComponent {
   submitted = false;
 
-  //ViewModel
+  //Data Binding
   dtoObj: UnionDetails;
   streetOptions = ['Street', 'Avenue', 'Court'];
-
-  /////////////////////////////
 }
