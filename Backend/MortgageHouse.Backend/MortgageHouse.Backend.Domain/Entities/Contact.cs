@@ -18,7 +18,6 @@ namespace MortgageHouse.Backend.Domain.Entities
         [Required]
         public string FirstName { get; set; }
 
-        [Required]
         public string MiddleName { get; set; }
 
         [Required]
