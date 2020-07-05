@@ -104,6 +104,9 @@ export class MortgageFormComponent implements OnInit {
   //Using the Above Regular expressions, these functions will be used to make sure that each field entry is abiding by the rules
   //stated in the business requirements
   checkPostCodeRule(): boolean {
+    if (StringHelper.isEmpty(this.dtoObj.AddressItem.Postcode))
+      return (this.hasPostcodeEntryError = true);
+
     if (!this.regex_postcode.test(`${this.dtoObj.AddressItem.Postcode}`)) {
       //If the condition fails
       return (this.hasPostcodeEntryError = true);
@@ -111,6 +114,9 @@ export class MortgageFormComponent implements OnInit {
   }
 
   checkPhoneNumberRule(): boolean {
+    if (StringHelper.isEmpty(this.dtoObj.ContactItem.PhoneNumber))
+      return (this.hasPhoneNumberEntryError = true);
+
     if (
       !this.regex_phoneNumber.test(`${this.dtoObj.ContactItem.PhoneNumber}`)
     ) {
@@ -120,6 +126,9 @@ export class MortgageFormComponent implements OnInit {
   }
 
   checkStreetNumberRule(): boolean {
+    if (StringHelper.isEmpty(this.dtoObj.AddressItem.StreetNumber))
+      return (this.hasStreetNumberEntryError = true);
+
     //Either a letter exists in the beginning of the query or after
     if (this.dtoObj.AddressItem.StreetNumber.match(/[a-zA-Z]/g).length > 1) {
       //If the condition fails
@@ -128,6 +137,9 @@ export class MortgageFormComponent implements OnInit {
   }
 
   checkContactFirstNameRule(): boolean {
+    if (StringHelper.isEmpty(this.dtoObj.ContactItem.FirstName))
+      return (this.hasContactFirstNameEntryError = true);
+
     if (!this.regex_contactName.test(`${this.dtoObj.ContactItem.FirstName}`)) {
       //If the condition fails
       return (this.hasContactFirstNameEntryError = true);
@@ -135,6 +147,9 @@ export class MortgageFormComponent implements OnInit {
   }
 
   checkContactMiddleNameRule(): boolean {
+    if (StringHelper.isEmpty(this.dtoObj.ContactItem.MiddleName))
+      return (this.hasContactMiddleNameEntryError = false);
+
     if (
       !this.regex_contactName.test(`${this.dtoObj.ContactItem.MiddleName}`) &&
       !StringHelper.isEmpty(this.dtoObj.ContactItem.MiddleName)
@@ -145,6 +160,9 @@ export class MortgageFormComponent implements OnInit {
   }
 
   checkContactLastNameRule(): boolean {
+    if (StringHelper.isEmpty(this.dtoObj.ContactItem.LastName))
+      return (this.hasContactLastNameEntryError = true);
+
     if (!this.regex_contactName.test(`${this.dtoObj.ContactItem.LastName}`)) {
       //If the condition fails
       return (this.hasContactLastNameEntryError = true);
