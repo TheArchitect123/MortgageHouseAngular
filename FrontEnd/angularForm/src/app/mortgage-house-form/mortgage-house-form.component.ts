@@ -53,6 +53,14 @@ export class MortgageFormComponent implements OnInit {
       result = false;
     }
 
+    //Check the regular expressions
+    result = !this.checkPostCodeRule(); //Validate Postcode
+    result = !this.checkContactFirstNameRule(); //Validate First Name
+    result = !this.checkContactMiddleNameRule(); //Validate Middle Name
+    result = !this.checkContactLastNameRule(); //Validate Last Name
+    result = !this.checkPhoneNumberRule(); // Validate Phone Number
+    result = !this.checkStreetNumberRule(); // Validate Street Number
+
     return result;
   }
 
@@ -70,6 +78,68 @@ export class MortgageFormComponent implements OnInit {
     this.dtoObj.ContactItem.PhoneNumber = '';
   }
 
+  //Regular Expression Rules -- For Validating Forms
+  regex_postcode: RegExp = new RegExp('^[0-9]{4}$');
+  regex_phoneNumber: RegExp = new RegExp('/^[0-9]{10}$/');
+  regex_streetNumber: RegExp = new RegExp('/^[a-zA-Z]^[0-9]{1}$/');
+  regex_contactName: RegExp = new RegExp('/^[a-zA-Z]{3,}$/');
+
+  //Show the Error Divs
+  hasPostcodeEntryError: boolean = false;
+  hasPhoneNumberEntryError: boolean = false;
+  hasStreetNumberEntryError: boolean = false;
+  hasContactFirstNameEntryError: boolean = false;
+  hasContactMiddleNameEntryError: boolean = false;
+  hasContactLastNameEntryError: boolean = false;
+
+  //Using the Above Regular expressions, these functions will be used to make sure that each field entry is abiding by the rules
+  //stated in the business requirements
+  checkPostCodeRule(): boolean {
+    if (!this.regex_postcode.test(`${this.dtoObj.AddressItem.Postcode}`)) {
+      //If the condition fails
+      return (this.hasPostcodeEntryError = true);
+    } else return (this.hasPostcodeEntryError = false);
+  }
+
+  checkPhoneNumberRule(): boolean {
+    if (
+      !this.regex_phoneNumber.test(`${this.dtoObj.ContactItem.PhoneNumber}`)
+    ) {
+      //If the condition fails
+      return (this.hasPhoneNumberEntryError = true);
+    } else return (this.hasPhoneNumberEntryError = false);
+  }
+
+  checkStreetNumberRule(): boolean {
+    if (
+      !this.regex_streetNumber.test(`${this.dtoObj.AddressItem.StreetNumber}`)
+    ) {
+      //If the condition fails
+      return (this.hasStreetNumberEntryError = true);
+    } else return (this.hasStreetNumberEntryError = false);
+  }
+
+  checkContactFirstNameRule(): boolean {
+    if (!this.regex_contactName.test(`${this.dtoObj.ContactItem.FirstName}`)) {
+      //If the condition fails
+      return (this.hasContactFirstNameEntryError = true);
+    } else return (this.hasContactFirstNameEntryError = false);
+  }
+
+  checkContactMiddleNameRule(): boolean {
+    if (!this.regex_contactName.test(`${this.dtoObj.ContactItem.MiddleName}`)) {
+      //If the condition fails
+      return (this.hasContactMiddleNameEntryError = true);
+    } else return (this.hasContactMiddleNameEntryError = false);
+  }
+
+  checkContactLastNameRule(): boolean {
+    if (!this.regex_contactName.test(`${this.dtoObj.ContactItem.LastName}`)) {
+      //If the condition fails
+      return (this.hasContactLastNameEntryError = true);
+    } else return (this.hasContactLastNameEntryError = false);
+  }
+
   initializeModel() {
     if (this.dtoObj == null) this.dtoObj = new ContactAddressDto();
     if (this.dtoObj.ContactItem == null)
@@ -81,10 +151,9 @@ export class MortgageFormComponent implements OnInit {
 
   //Data Binding
   dtoObj: ContactAddressDto;
-
   streetOptions = ['Street', 'Avenue', 'Court'];
 
-  async submitFormToServer() {
+  submitFormToServer() {
     if (this.isSubmissionEnabled()) {
       //Make sure to disable the submission button when the the controls are still missing some details
       //If the string looks good to parse, then send it over to the server
@@ -100,10 +169,8 @@ export class MortgageFormComponent implements OnInit {
         });
     } else {
       alert(
-        'Cannot submit the form details to the server. Please fill out all the fields before resubmitting'
+        'Cannot submit these form details to the server. Please fill out all the fields and/or correct the errors before resubmitting'
       );
     }
-
-    return true;
   }
 }

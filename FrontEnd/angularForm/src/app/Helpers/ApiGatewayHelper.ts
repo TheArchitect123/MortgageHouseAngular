@@ -11,7 +11,7 @@ import { UrlResources } from '../Constants/UrlResources';
 })
 export class ApiGatewayHelper {
   constructor(private mcservice: MortgageHouseService) {}
-  public SendInfoToRemoteServer(json: string): Observable<any> {
+  public SendInfoToRemoteServer(json: string): Observable<boolean> {
     //invoke the http client api, to send the details off
     return this.mcservice.PostInformation(json);
   }
