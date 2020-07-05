@@ -60,6 +60,7 @@ export class MortgageFormComponent implements OnInit {
     result = !this.checkContactLastNameRule(); //Validate Last Name
     result = !this.checkPhoneNumberRule(); // Validate Phone Number
     result = !this.checkStreetNumberRule(); // Validate Street Number
+    result = !this.checkBirthDateFormatter(); //Validate Birth Date
 
     return result;
   }
@@ -80,9 +81,11 @@ export class MortgageFormComponent implements OnInit {
 
   //Regular Expression Rules -- For Validating Forms
   regex_postcode: RegExp = new RegExp('^[0-9]{4}$');
-  regex_phoneNumber: RegExp = new RegExp('/^[0-9]{10}$/');
-  regex_streetNumber: RegExp = new RegExp('/^[a-zA-Z]^[0-9]{1}$/');
-  regex_contactName: RegExp = new RegExp('/^[a-zA-Z]{3,}$/');
+  regex_phoneNumber: RegExp = new RegExp('^[0-9]{10}$');
+  regex_contactName: RegExp = new RegExp('^[a-zA-Z]{3,}$');
+  regex_BirthDateUniversal: RegExp = new RegExp(
+    '^[0-9]{2}[\\/][0-9]{2}[\\/][0-9]{4}'
+  );
 
   //Show the Error Divs
   hasPostcodeEntryError: boolean = false;
@@ -91,6 +94,12 @@ export class MortgageFormComponent implements OnInit {
   hasContactFirstNameEntryError: boolean = false;
   hasContactMiddleNameEntryError: boolean = false;
   hasContactLastNameEntryError: boolean = false;
+  hasBirthDateEntryError: boolean = false;
+
+  //Error Messages
+  readonly defaultBirthDateError =
+    'Birthdate must be in the format of dd/mm/yyyy';
+  birthDateErrorMessage: string = `${this.defaultBirthDateError}`; //Default Birthday Error message
 
   //Using the Above Regular expressions, these functions will be used to make sure that each field entry is abiding by the rules
   //stated in the business requirements
@@ -111,9 +120,8 @@ export class MortgageFormComponent implements OnInit {
   }
 
   checkStreetNumberRule(): boolean {
-    if (
-      !this.regex_streetNumber.test(`${this.dtoObj.AddressItem.StreetNumber}`)
-    ) {
+    //Either a letter exists in the beginning of the query or after
+    if (this.dtoObj.AddressItem.StreetNumber.match(/[a-zA-Z]/g).length > 1) {
       //If the condition fails
       return (this.hasStreetNumberEntryError = true);
     } else return (this.hasStreetNumberEntryError = false);
@@ -127,7 +135,10 @@ export class MortgageFormComponent implements OnInit {
   }
 
   checkContactMiddleNameRule(): boolean {
-    if (!this.regex_contactName.test(`${this.dtoObj.ContactItem.MiddleName}`)) {
+    if (
+      !this.regex_contactName.test(`${this.dtoObj.ContactItem.MiddleName}`) &&
+      !StringHelper.isEmpty(this.dtoObj.ContactItem.MiddleName)
+    ) {
       //If the condition fails
       return (this.hasContactMiddleNameEntryError = true);
     } else return (this.hasContactMiddleNameEntryError = false);
@@ -138,6 +149,43 @@ export class MortgageFormComponent implements OnInit {
       //If the condition fails
       return (this.hasContactLastNameEntryError = true);
     } else return (this.hasContactLastNameEntryError = false);
+  }
+
+  checkBirthDateFormatter(): boolean {
+    if (StringHelper.isEmpty(this.dtoObj.ContactItem.DateOfBirth)) {
+      //Empty Field
+      this.birthDateErrorMessage = 'This field is required';
+      return (this.hasBirthDateEntryError = true);
+    }
+
+    if (
+      //If the Birthday does not meet the format required
+      !this.regex_BirthDateUniversal.test(
+        `${this.dtoObj.ContactItem.DateOfBirth}`
+      )
+    ) {
+      this.birthDateErrorMessage = this.defaultBirthDateError;
+      return (this.hasBirthDateEntryError = true);
+    } else {
+      //this.hasBirthDateEntryError = false;
+      //Check for the first date
+      if (
+        !StringHelper.isBirthYearValid(
+          Number.parseInt(
+            this.dtoObj.ContactItem.DateOfBirth.substring(
+              6,
+              this.birthDateErrorMessage.length
+            )
+          )
+        )
+      ) {
+        this.birthDateErrorMessage =
+          'The specified year is not valid. The year cannot be less than 1923 and not dated sometime in the future';
+        return (this.hasBirthDateEntryError = true);
+      } else {
+        return (this.hasBirthDateEntryError = false);
+      }
+    }
   }
 
   initializeModel() {

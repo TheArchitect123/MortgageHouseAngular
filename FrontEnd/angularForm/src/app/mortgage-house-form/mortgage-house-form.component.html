@@ -11,48 +11,51 @@
         <h2>Contact Details</h2>
         <div class="form-group">
             <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firstName" (change)="checkPostCodeRule()" required [(ngModel)]="dtoObj.ContactItem.FirstName" name="firstName" #value="ngModel" #name="ngModel">
-            <!-- <div [hidden]="" class="alert alert-danger">
-                This field is required
-            </div> -->
+            <input type="text" class="form-control" id="firstName" required [(ngModel)]="dtoObj.ContactItem.FirstName" (ngModelChange)="checkContactFirstNameRule()" name="firstName" #value="ngModel" #name="ngModel">
+            <div [hidden]="!hasContactFirstNameEntryError" class="alert alert-danger">
+                First name cannot contain any numbers and must be a minimum of 3 letters
+            </div>
         </div>
 
         <div class="form-group">
             <label for="middleName">Middle Name (Optional)</label>
-            <input type="text" class="form-control" id="middleName" [(ngModel)]="dtoObj.ContactItem.MiddleName" name="middleName" #value="ngModel" #name="ngModel">
+            <input type="text" class="form-control" id="middleName" [(ngModel)]="dtoObj.ContactItem.MiddleName" (ngModelChange)="checkContactMiddleNameRule()" name="middleName" #value="ngModel" #name="ngModel">
+            <div [hidden]="!hasContactMiddleNameEntryError" class="alert alert-danger">
+                Middle name cannot contain any numbers and must be a minimum of 3 letters
+            </div>
         </div>
 
         <div class="form-group">
             <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" required [(ngModel)]="dtoObj.ContactItem.LastName" name="lastName" #value="ngModel" #name="ngModel">
-            <!-- <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-          This field is required
-        </div> -->
+            <input type="text" class="form-control" id="lastName" required [(ngModel)]="dtoObj.ContactItem.LastName" (ngModelChange)="checkContactLastNameRule()" name="lastName" #value="ngModel" #name="ngModel">
+            <div [hidden]="!hasContactLastNameEntryError" class="alert alert-danger">
+                Last name cannot contain any numbers and must be a minimum of 3 letters
+            </div>
         </div>
 
         <div class="form-group">
             <label for="phoneNumber">Phone Number</label>
-            <input type="tel" class="form-control" id="phoneNumber" required [(ngModel)]="dtoObj.ContactItem.PhoneNumber" name="phoneNumber" #value="ngModel" #name="ngModel">
-            <!-- <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-          This field is required
-        </div> -->
+            <input type="tel" class="form-control" id="phoneNumber" required [(ngModel)]="dtoObj.ContactItem.PhoneNumber" (ngModelChange)="checkPhoneNumberRule()" name="phoneNumber" #value="ngModel" #name="ngModel">
+            <div [hidden]="!hasPhoneNumberEntryError" class="alert alert-danger">
+                Phone number needs to contain 10 digits ONLY
+            </div>
         </div>
 
         <div class="form-group">
             <label for="DOB">Date of Birth</label>
-            <input type="text" class="form-control" id="DOB" required [(ngModel)]="dtoObj.ContactItem.DateOfBirth" name="DOB" #value="ngModel" #name="ngModel">
-            <!-- <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-          This field is required
-        </div> -->
+            <input type="text" class="form-control" id="DOB" required [(ngModel)]="dtoObj.ContactItem.DateOfBirth" (ngModelChange)="checkBirthDateFormatter()" name="DOB" #value="ngModel" #name="ngModel">
+            <div [hidden]="!hasBirthDateEntryError" [innerHTML]="birthDateErrorMessage" class="alert alert-danger">
+
+            </div>
         </div>
 
         <h2>Address Details</h2>
         <div class="form-group">
             <label for="streetNumber">Street Number</label>
-            <input type="text" class="form-control" id="streetNumber" required [(ngModel)]="dtoObj.AddressItem.StreetNumber" #value="ngModel" name="streetNumber" #name="ngModel">
-            <!-- <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-          This field is required
-        </div> -->
+            <input type="text" class="form-control" id="streetNumber" required [(ngModel)]="dtoObj.AddressItem.StreetNumber" (ngModelChange)="checkStreetNumberRule()" #value="ngModel" name="streetNumber" #name="ngModel">
+            <div [hidden]="!hasStreetNumberEntryError" class="alert alert-danger">
+                Street number must be a number and can contain at most only ONE character
+            </div>
         </div>
 
         <div class="form-group">
