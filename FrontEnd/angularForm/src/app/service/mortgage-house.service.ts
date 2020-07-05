@@ -12,8 +12,8 @@ import { UrlResources } from '../Constants/UrlResources';
 })
 export class MortgageHouseService {
   constructor(private http: HttpClient) {}
-  PostInformation(json: string): Observable<any> {
-    const headers = {
+  PostInformation(json: string): Observable<boolean> {
+    let headers = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         xUsername: SecurityConstants.xUsername,
@@ -22,6 +22,6 @@ export class MortgageHouseService {
     };
 
     //Send the information to the remote server
-    return this.http.post(UrlResources.CommonPostEndpoint, json, headers);
+    return this.http.post<boolean>(UrlResources.CommonPostEndpoint, json);
   }
 }

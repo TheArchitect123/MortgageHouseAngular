@@ -1,6 +1,6 @@
-import { Address } from './address';
-import { Contact } from './contact';
-export class UnionDetails {
-  public contactDto: Contact;
-  public addressDto: Address;
+import { AddressDto } from './address';
+import { ContactDto } from './contact';
+export class ContactAddressDto {
+  public ContactItem: ContactDto;
+  public AddressItem: AddressDto;
 }

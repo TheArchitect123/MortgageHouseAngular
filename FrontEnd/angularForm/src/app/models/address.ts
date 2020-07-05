@@ -1,6 +1,6 @@
 import { StreetType } from '../enums/streetType';
 
-export class Address {
+export class AddressDto {
   public StreetNumber: string;
   public StreetName: string;
   public StreetOption: StreetType;
