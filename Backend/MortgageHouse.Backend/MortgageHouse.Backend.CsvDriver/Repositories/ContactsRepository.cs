@@ -11,12 +11,12 @@ namespace MortgageHouse.Backend.CsvDriver.Repositories
 {
     public class ContactsRepository : IContactsRepository
     {
-        public ContactsRepository(DatabaseSqliteAccess dbService)
+        public ContactsRepository(DatabaseCsvAccess dbService)
         {
             _dbService = dbService;
         }
 
-        public DatabaseSqliteAccess _dbService;
+        public DatabaseCsvAccess _dbService;
 
         public bool AddContact(Contact model)
         {

@@ -12,12 +12,12 @@ namespace MortgageHouse.Backend.CsvDriver.Repositories
 {
     public class AddressRepository : IAddressRepository
     {
-        public AddressRepository(DatabaseSqliteAccess dbService)
+        public AddressRepository(DatabaseCsvAccess dbService)
         {
             _dbService = dbService;
         }
 
-        public DatabaseSqliteAccess _dbService;
+        public DatabaseCsvAccess _dbService;
 
         public bool AddAddress(Address model)
         {

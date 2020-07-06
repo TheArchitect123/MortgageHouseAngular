@@ -32,19 +32,28 @@ namespace MortgageHouse.Backend.RestApi
         public Startup(IConfiguration configuration) => Configuration = configuration;
         public IConfiguration Configuration { get; }
 
-        private void InitializeDatabase()
+        //private void InitializeDatabase()
+        //{
+        //    if (!File.Exists(DbConstants.ConnectionString))
+        //    {
+        //        Directory.CreateDirectory(DbConstants.ConnectionStringDir);
+        //        File.Create(DbConstants.ConnectionString).Dispose();
+        //    }
+        //}
+
+        private void InitializeCsvDatabase()
         {
-            if (!File.Exists(DbConstants.ConnectionString))
+            if (!File.Exists(DbCsvConstants.ConnectionString))
             {
-                Directory.CreateDirectory(DbConstants.ConnectionStringDir);
-                File.Create(DbConstants.ConnectionString).Dispose();
+                Directory.CreateDirectory(DbCsvConstants.ConnectionStringDir);
+                File.Create(DbCsvConstants.ConnectionString).Dispose();
             }
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            InitializeDatabase();
+            InitializeCsvDatabase();
 
             services.AddMvc(w => w.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
@@ -54,7 +63,7 @@ namespace MortgageHouse.Backend.RestApi
                 .AddScoped<ContactsService>();
 
             //Repositories
-            services.AddScoped<DatabaseSqliteAccess>().AddScoped<IAddressRepository, AddressRepository>()
+            services.AddScoped<DatabaseCsvAccess>().AddScoped<IAddressRepository, AddressRepository>()
      .AddScoped<IContactsRepository, ContactsRepository>();
 
             //Mapper

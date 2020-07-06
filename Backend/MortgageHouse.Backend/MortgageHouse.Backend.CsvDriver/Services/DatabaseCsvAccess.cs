@@ -15,11 +15,11 @@ using System.Linq;
 
 namespace MortgageHouse.Backend.CsvDriver.Services
 {
-    public class DatabaseSqliteAccess
+    public class DatabaseCsvAccess
     {
         public SQLiteConnection _connection { get; set; }
 
-        public DatabaseSqliteAccess()
+        public DatabaseCsvAccess()
         {
             _connection = new SQLiteConnection(new SQLiteConnectionString(DbConstants.ConnectionString, false));
             _connection.BusyTimeout = new TimeSpan(1, 0, 0);
