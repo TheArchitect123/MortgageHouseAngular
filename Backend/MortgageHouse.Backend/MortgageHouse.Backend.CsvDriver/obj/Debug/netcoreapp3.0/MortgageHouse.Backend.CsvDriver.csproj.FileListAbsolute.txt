@@ -1,6 +1,4 @@
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.CsvDriver\bin\Debug\netcoreapp3.0\MortgageHouse.Backend.CsvDriver.deps.json
-C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.CsvDriver\bin\Debug\netcoreapp3.0\MortgageHouse.Backend.CsvDriver.runtimeconfig.json
-C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.CsvDriver\bin\Debug\netcoreapp3.0\MortgageHouse.Backend.CsvDriver.runtimeconfig.dev.json
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.CsvDriver\bin\Debug\netcoreapp3.0\MortgageHouse.Backend.CsvDriver.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.CsvDriver\bin\Debug\netcoreapp3.0\MortgageHouse.Backend.CsvDriver.pdb
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.CsvDriver\bin\Debug\netcoreapp3.0\MortgageHouse.Backend.Constants.dll
@@ -14,8 +12,7 @@ C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHous
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.CsvDriver\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.CsvDriver.csprojAssemblyReference.cache
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.CsvDriver\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.CsvDriver.AssemblyInfoInputs.cache
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.CsvDriver\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.CsvDriver.AssemblyInfo.cs
-C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.CsvDriver\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.CsvDriver.csproj.CoreCompileInputs.cache
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.CsvDriver\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.CsvDriver.csproj.CopyComplete
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.CsvDriver\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.CsvDriver.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.CsvDriver\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.CsvDriver.pdb
-C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.CsvDriver\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.CsvDriver.genruntimeconfig.cache
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.CsvDriver\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.CsvDriver.csproj.CoreCompileInputs.cache

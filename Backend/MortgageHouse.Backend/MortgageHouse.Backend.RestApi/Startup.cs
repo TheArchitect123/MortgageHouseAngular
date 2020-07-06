@@ -64,6 +64,7 @@ namespace MortgageHouse.Backend.RestApi
 
             //Repositories
             services.AddScoped<DatabaseCsvAccess>().AddScoped<IAddressRepository, AddressRepository>()
+                .AddScoped<IContactsAddressRepository, ContactsAddressRepository>()
      .AddScoped<IContactsRepository, ContactsRepository>();
 
             //Mapper

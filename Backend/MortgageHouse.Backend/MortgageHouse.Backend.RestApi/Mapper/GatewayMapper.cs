@@ -16,12 +16,14 @@ namespace MortgageHouse.Backend.RestApi.Mapper
         {
             this.CreateMap<Address, AddressDto>();
             this.CreateMap<Contact, ContactDto>();
+            this.CreateMap<ContactAddress, ContactAddressDto>();
         }
 
         public void InitializeFromDto()
         {
             this.CreateMap<AddressDto, Address>();
             this.CreateMap<ContactDto, Contact>();
+            this.CreateMap<ContactAddressDto, ContactAddress>();
         }
     }
 }

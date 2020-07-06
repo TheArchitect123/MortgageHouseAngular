@@ -118,37 +118,17 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "Atomiv.Infrastructure.CsvHelper": {
+              "target": "Package",
+              "version": "[1.0.37, )"
+            },
             "AutoMapper": {
               "target": "Package",
               "version": "[10.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore": {
+            "CsvHelper": {
               "target": "Package",
-              "version": "[3.1.5, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.1.5, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[3.1.5, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite.Design": {
-              "target": "Package",
-              "version": "[1.1.6, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.1.5, )"
-            },
-            "sqlite-net-pcl": {
-              "target": "Package",
-              "version": "[1.7.335, )"
+              "version": "[15.0.5, )"
             }
           },
           "imports": [

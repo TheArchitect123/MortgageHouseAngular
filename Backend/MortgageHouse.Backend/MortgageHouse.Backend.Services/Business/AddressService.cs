@@ -33,15 +33,12 @@ namespace MortgageHouse.Backend.Services.Business
         public IEnumerable<AddressDto> GetAllAddresses()
         {
             var addressItems = _commonRepo.GetAddresses();
-            Console.WriteLine(addressItems.Count());
-
             return addressItems == null ? throw new ArgumentNullException("Could not find any addresses") : addressItems.ToList().ConvertAll(w => _mapper.Map<Address, AddressDto>(w));
         }
 
         public void WriteAddressForSpecifiedItem(AddressDto addressDto)
         {
             _commonRepo.AddAddress(_mapper.Map<AddressDto, Address>(addressDto));
-            _commonRepo.SaveChanges();
         }
 
         public async Task WriteAddressForSpecifiedItemAsync(AddressDto addressDto)

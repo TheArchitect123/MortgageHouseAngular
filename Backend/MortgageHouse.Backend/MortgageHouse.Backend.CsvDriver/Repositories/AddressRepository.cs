@@ -2,7 +2,6 @@
 using MortgageHouse.Backend.CsvDriver.Services;
 using MortgageHouse.Backend.Domain.Entities;
 using MortgageHouse.Backend.Extensions;
-using SQLitePCL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,7 +37,7 @@ namespace MortgageHouse.Backend.CsvDriver.Repositories
         {
             try
             {
-                return _dbService.GetAll<Address>("SELECT * FROM Address");
+                return _dbService.GetItems().Select(w => w.AddressItem);
             }
             catch (Exception ex)
             {
@@ -51,7 +50,7 @@ namespace MortgageHouse.Backend.CsvDriver.Repositories
         {
             try
             {
-                return _dbService.GetAll<Address>($"SELECT * FROM Address WHERE StreetName = '{streetName}'").SingleOrDefault();
+                return _dbService.GetItems().Select(w => w.AddressItem).Where(w => w.StreetName.Equals(streetName, StringComparison.OrdinalIgnoreCase)).SingleOrDefault();
             }
             catch (Exception ex)
             {
@@ -62,10 +61,7 @@ namespace MortgageHouse.Backend.CsvDriver.Repositories
 
         public bool SaveChanges()
         {
-            try { _dbService.SaveChanges(); }
-            catch { return false; }
-
-            return true;
+            throw new NotImplementedException();
         }
     }
 }

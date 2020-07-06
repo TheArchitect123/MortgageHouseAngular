@@ -18,9 +18,7 @@ C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHous
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Sqlite.dll
-C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Sqlite.Design.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Caching.Abstractions.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Caching.Memory.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Configuration.dll
@@ -93,3 +91,9 @@ C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHous
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.RestApi.dll
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.RestApi.pdb
 C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\obj\Debug\netcoreapp3.0\MortgageHouse.Backend.RestApi.genruntimeconfig.cache
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.0\Atomiv.Core.All.dll
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.0\Atomiv.Core.Application.dll
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.0\Atomiv.Core.Application.Interface.dll
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.0\Atomiv.Core.Common.dll
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.0\Atomiv.Core.Domain.dll
+C:\MortgageHouse\MortgageHouseAngular\Backend\MortgageHouse.Backend\MortgageHouse.Backend.RestApi\bin\Debug\netcoreapp3.0\Atomiv.Infrastructure.CsvHelper.dll

@@ -12,4 +12,6 @@ namespace MortgageHouse.Backend.Domain.Entities
         Address GetAddressForID(string streetName);
         IEnumerable<Address> GetAddresses();
     }
+
+
 }
